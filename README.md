@@ -10,29 +10,20 @@ abgerufen und anschließend analysiert; die Kennzahlen werden aus dem eingelesen
 
 Im zweiten Schritt werden die Rohdaten aufbereitet und die Kennzahlen berechnet. Das Ergbnis dieses Schritts wird in einer zweiten Excel-Datei zwischengespeichert.
 
-Im letzten Schritt werden die Kennzahlen in insgesamt 3 Diagrammen visualisiert.
+Im letzten Schritt werden die ermittelten Kennzahlen mit mehreren Diagrammen visualisiert.
 
 - Autor: Martin Holle
-- Datum 24.07.2020
+- Datum 07.08.2020
 - Lizenz: MIT
 
 ## TODO
 
-### Allgemein
-
-- Zentrale Konfiguration hinzufügen
-
 ### Datenabfrage
 
-- Erweiterung um Auswertung des Meldungsarchivs
 - Formatierung des Loggings finalisieren
 
 ### Visualisierung
 
-- Senkrechte Grid-Linien
-- Legenden platzieren
-- Farben anpassen
-- Dicke der Linien setzen
-- Maße optimieren: Statt 15:10 vielleicht eher 16:10 oder sogar mehr? Ausprobieren!
+- Maße optimieren: Statt 15:10 vielleicht eher 16:10 oder mehr? Ausprobieren!
 - Meta-Daten für Grafiken als yaml-Datei erzeugen
-
+- yaml-Datei mit tagesaktuellen Zahlen und Meta-Daten erzeugen
