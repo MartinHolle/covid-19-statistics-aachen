@@ -1,6 +1,7 @@
-# Custom Files specific for project
+# Custom Files and Folders specific for project
 *.jpg
 *.log
+output
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -131,4 +132,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-data
