@@ -34,6 +34,5 @@ Im letzten Schritt werden die Kennzahlen in insgesamt 3 Diagrammen visualisiert.
 - Farben anpassen
 - Dicke der Linien setzen
 - Maße optimieren: Statt 15:10 vielleicht eher 16:10 oder sogar mehr? Ausprobieren!
-- Ränder optimieren (aktuell im gespeicherten jpg zu breit)
 - Meta-Daten für Grafiken als yaml-Datei erzeugen
 
