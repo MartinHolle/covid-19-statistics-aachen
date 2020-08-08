@@ -1,24 +1,32 @@
 # Covid-19-Statistics Aachen
 
-Python-Projekt zur Berechnung von Kennwerten zur Corona-Pandemie aus den Fallzahlen der Städteregion Aachen und der Stadt Aachen. 
+Python-Projekt mit zur Abfrage, Berechnung und Visualisierung von Kennwerten zur Corona-Pandemie aus den Fallzahlen der Städteregion Aachen und der Stadt Aachen. 
 
 - Autor: Martin Holle
-- Datum 07.08.2020
+- Datum 08.08.2020
 - Lizenz: MIT
 
-## c19stats-ac-abfrage.ipynb
+Das Projekt besteht zur Zeit aus insgesamt drei [Juypter-Notebooks](https://jupyter.org/), die sich jeweils auf einen Aspekt der Realisierung konzentrieren:
 
-Im ersten Schritt werden dazu die aktuellen Pressemitteilungen der Städteregion Aachen zur Corona-Pandemie von der Website
+1. Abfrage der Daten von der [Website](https://www.staedteregion-aachen.de/de/navigation/aemter/oeffentlichkeitsarbeit-s-13/aktuelles/pressemitteilungen/aktuelle-pressemitteilungen/coronavirus/) der Städteregion Aachen mit den Pressenveröffentlichungen zur Lage der Corona-Pandemie in der Städteregion und der Stadt Aachen
+2. Aufbereitung der Rohdaten und Berechnung verschiedener Kennzahlen
+3. Visualisierung der Kennzahlen
+   
+## Datenabfrage
 
-https://www.staedteregion-aachen.de/de/navigation/aemter/oeffentlichkeitsarbeit-s-13/aktuelles/pressemitteilungen/aktuelle-pressemitteilungen/
+Jupyter-Notebook: `c19stats-ac-abfrage.ipynb`
 
-abgerufen und anschließend analysiert; die Kennzahlen werden aus dem eingelesenen Text extrahiert und in einer Excel-Datei  für die Weiterverabeitung im nächsten Schritt zwischengespeichert.
+Im ersten Schritt werden die aktuellen Pressemitteilungen der Städteregion Aachen zur Corona-Pandemie von der [Website](https://www.staedteregion-aachen.de/de/navigation/aemter/oeffentlichkeitsarbeit-s-13/aktuelles/pressemitteilungen/aktuelle-pressemitteilungen/coronavirus/) abgerufen und anschließend analysiert; die Kennzahlen werden aus dem eingelesenen Text extrahiert und in einer Excel-Datei  für die Weiterverabeitung im nächsten Schritt zwischengespeichert.
 
-## c19stats-ac-aufbereitung.ipynb
+## Aufbereitung der Rohdaten und Berechnung von Kennzahlne
+
+Jupyter-Notebook: `c19stats-ac-aufbereitung.ipynb`
 
 Im zweiten Schritt werden die Rohdaten aufbereitet und die Kennzahlen berechnet. Das Ergbnis dieses Schritts wird in einer zweiten Excel-Datei zwischengespeichert.
 
-## c19stats-ac-visualisierung.ipynb
+## Visualisierung
+
+Jupyter-Notebook: `c19stats-ac-visualisierung.ipynb`
 
 Im letzten Schritt werden die ermittelten Kennzahlen mit mehreren Diagrammen visualisiert.
 
