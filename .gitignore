@@ -2,6 +2,7 @@
 *.jpg
 *.log
 output
+upload.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
