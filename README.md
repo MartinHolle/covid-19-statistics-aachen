@@ -3,7 +3,7 @@
 Python-Projekt zur Abfrage, Berechnung und Visualisierung von Kennwerten zur Corona-Pandemie aus den Fallzahlen der Städteregion Aachen und der Stadt Aachen. 
 
 - Autor: Martin Holle
-- Datum 16.08.2020
+- Datum 08.10.2020
 - Lizenz: MIT
 - Projekt: https://github.com/MartinHolle/covid-19-statistics-aachen
 
@@ -25,6 +25,9 @@ Im ersten Schritt werden die aktuellen Pressemitteilungen der Städteregion Aach
 Jupyter-Notebook: `c19stats-ac-aufbereitung.ipynb`
 
 Im zweiten Schritt werden die Rohdaten aufbereitet und die Kennzahlen berechnet. Das Ergbnis dieses Schritts wird in einer zweiten Excel-Datei `c19stats-kennzahlen.xlsx` zwischengespeichert.
+
+_Hinweis:<br/>
+Seit dem 8.10.2020 verwende ich für die Berechnung der 7-Tage-Inzidenz die Einwohnerzahlen zum Stichtag 31.12.2019 (Quelle: [Landesbetrieb IT.NRW - Statistik und IT-Dienstleistungen](https://www.it.nrw/statistik/eckdaten/bevoelkerung-nach-gemeinden-93051)), wie dies auch die Behörden tun. Bis dahin verwendete ich einen älteren Stand aus Wikipedia. Die Bevölkerung hat ggü. diesem Stand zugenommen, sodass die Kennzahlen für die 7-Tage-Inzidenz geringfügig niedriger ausfallen._
 
 ## Visualisierung
 
