@@ -3,22 +3,32 @@
 Python-Projekt zur Abfrage, Berechnung und Visualisierung von Kennwerten zur Corona-Pandemie aus den Fallzahlen der Städteregion Aachen und der Stadt Aachen. 
 
 - Autor: Martin Holle
-- Datum 08.10.2020
+- Datum 23.10.2020
 - Lizenz: MIT
 - Projekt: https://github.com/MartinHolle/covid-19-statistics-aachen
 
-Das Projekt besteht zur Zeit aus insgesamt vier [Juypter-Notebooks](https://jupyter.org/), die sich jeweils auf einen Aspekt der Realisierung konzentrieren:
+Das Projekt besteht zur Zeit aus insgesamt fünf [Juypter-Notebooks](https://jupyter.org/), die sich jeweils auf einen Aspekt der Realisierung konzentrieren:
 
 1. Abfrage der Daten von der [Website](https://www.staedteregion-aachen.de/de/navigation/aemter/oeffentlichkeitsarbeit-s-13/aktuelles/pressemitteilungen/aktuelle-pressemitteilungen/coronavirus/) der Städteregion Aachen mit den Presseveröffentlichungen zur Lage der Corona-Pandemie in der Städteregion und der Stadt Aachen
-2. Aufbereitung der Rohdaten und Berechnung verschiedener Kennzahlen
-3. Visualisierung der Kennzahlen
-4. Upload in ein Zielverzeichnis auf einem Web-Server per FTP
+2. Import neuer Daten
+3. Aufbereitung der Rohdaten und Berechnung verschiedener Kennzahlen
+4. Visualisierung der Kennzahlen
+5. Upload in ein Zielverzeichnis auf einem Web-Server per FTP
    
 ## Datenabfrage
 
 Jupyter-Notebook: `c19stats-ac-abfrage.ipynb`
 
 Im ersten Schritt werden die aktuellen Pressemitteilungen der Städteregion Aachen zur Corona-Pandemie von der [Website](https://www.staedteregion-aachen.de/de/navigation/aemter/oeffentlichkeitsarbeit-s-13/aktuelles/pressemitteilungen/aktuelle-pressemitteilungen/coronavirus/) abgerufen und anschließend analysiert. Die Kennzahlen (Gesamtanzahl der Infektionen, Anzahl wieder Genesener, Summe der Todesfälle, aktuelle Anzahl akuter Infektionen) werden aus dem eingelesenen Text extrahiert und in einer Excel-Datei für die Weiterverabeitung im nächsten Schritt zwischengespeichert. Die Excel-Datei `c19stats-rohdaten.xlsx` enthält die gesamte Historie der bisher veröffentlichten und von der Website eingelesenen Daten. 
+
+_Hinweis: Dieses Notebook funktioniert aufgrund von Änderungen an Format und Formulierungen der Meldungen z.Zt. nicht._
+
+## Datenimport
+
+Jupyter-Notebook: `c19stats-ac-import.ipynb`
+
+Import neuer Daten (als Ersatz für das Web-Scraping) aus dem Excel-Sheet `c19stats-ac-import.xlsx`.
+Zusammenführung mit den existierenden Daten und Speichern des Resultats in der Excel-Datei `c19stats-rohdaten.xlsx` für die Datenübergabe an den nächsten Schritt, in dem die Daten aufbereitet werden.
 
 ## Aufbereitung der Rohdaten und Berechnung von Kennzahlen
 
@@ -55,9 +65,16 @@ Im letzten Schritt werden die im vorherigen Schritt produzierten Grafik-Dateien 
 
 ## Daten
 
-Das Verzeichnis `data` enthält die beiden _Excel_-Dateien mit den Rohdaten und daraus berechneten Kennwerten:
+Das Verzeichnis `data` enthält die folgenden _Excel_-Dateien mit den Rohdaten und daraus berechneten Kennwerten:
 
+- `c19stats-ac-import.xlsx`: Import neuer Daten
 - `c19stats-rohdaten.xlsx`: Rohdaten
 - `c19stats-kennzahlen.xlsx`: Aufbereitete Kennzahlen
 
+## Logging
 
+Das Logging erfolgt in die Datei `c19stats.log` im Verteichnis `logs`.
+
+## Konfiguration
+
+Die Konfiguration wird aus der Datei `config.ini` im Hauptverzeichnis gelesen.
