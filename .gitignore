@@ -134,3 +134,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 c19stats-ac-rohdaten Kopie.xlsx
+c19stats-ac-rohdaten.xlsx
+c19stats-ac-import.xlsx
+
+
