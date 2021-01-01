@@ -3,7 +3,7 @@
 Python-Projekt zur Abfrage, Berechnung und Visualisierung von Kennwerten zur Corona-Pandemie aus den Fallzahlen der Städteregion Aachen und der Stadt Aachen. 
 
 - Autor: Martin Holle
-- Datum 23.10.2020
+- Datum 01.01.2021
 - Lizenz: MIT
 - Projekt: https://github.com/MartinHolle/covid-19-statistics-aachen
 
@@ -36,8 +36,11 @@ Jupyter-Notebook: `c19stats-ac-aufbereitung.ipynb`
 
 Im zweiten Schritt werden die Rohdaten aufbereitet und die Kennzahlen berechnet. Das Ergbnis dieses Schritts wird in einer zweiten Excel-Datei `c19stats-kennzahlen.xlsx` zwischengespeichert.
 
-_Hinweis:<br/>
-Seit dem 8.10.2020 verwende ich für die Berechnung der 7-Tage-Inzidenz die Einwohnerzahlen zum Stichtag 31.12.2019 (Quelle: [Landesbetrieb IT.NRW - Statistik und IT-Dienstleistungen](https://www.it.nrw/statistik/eckdaten/bevoelkerung-nach-gemeinden-93051)), wie dies auch die Behörden tun. Bis dahin verwendete ich einen älteren Stand aus Wikipedia. Die Bevölkerung hat ggü. diesem Stand zugenommen, sodass die Kennzahlen für die 7-Tage-Inzidenz geringfügig niedriger ausfallen._
+_Hinweise_:
+
+_Seit dem 8.10.2020 verwende ich für die Berechnung der 7-Tage-Inzidenz die Einwohnerzahlen zum Stichtag 31.12.2019 (Quelle: [Landesbetrieb IT.NRW - Statistik und IT-Dienstleistungen](https://www.it.nrw/statistik/eckdaten/bevoelkerung-nach-gemeinden-93051)), wie dies auch die Behörden tun. Bis dahin verwendete ich einen älteren Stand aus Wikipedia. Die Bevölkerung hat ggü. diesem Stand zugenommen, sodass die Kennzahlen für die 7-Tage-Inzidenz geringfügig niedriger ausfallen._
+
+_Seit dem 1.1.2021 interpoliere ich fehlende Werte in den Summenspalten der Kennzahlen _linear_, statt sie wie zuvor per `bfill` oder `ffill` einfach fortzuschreiben. Das vorherige Verfahren führte zu inakzeptablen Sprüngen insbesondere des Inzidenzverlaufs, die lineare Interpolation führte zu realistischen Ergebnissen für die Kennzahlen._ 
 
 ## Visualisierung
 
